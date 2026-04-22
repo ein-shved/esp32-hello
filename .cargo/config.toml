@@ -1,0 +1,12 @@
+[target.riscv32imac-unknown-none-elf]
+runner = "espflash flash --monitor"
+linker = "rust-lld"
+
+[build]
+target = "riscv32imac-unknown-none-elf"
+
+[unstable]
+build-std = ["core", "alloc"]
+
+[env]
+DEFMT_LOG = "info"
