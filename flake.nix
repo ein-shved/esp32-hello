@@ -22,7 +22,7 @@
         target = "riscv32imac-unknown-none-elf";
 
         # Rust toolchain with necessary components
-        rustToolchain = pkgs.rust-bin.stable.latest.default.override {
+        rustToolchain = pkgs.rust-bin.nightly.latest.default.override {
           extensions = [ "rust-src" "rustfmt" "clippy" ];
           targets = [ target ];
         };
